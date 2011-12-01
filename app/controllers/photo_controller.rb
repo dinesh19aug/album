@@ -13,6 +13,7 @@ class PhotoController < ApplicationController
 
   def new
     @photo= Photo.new
+    @albums=Albums.all
   end
 
   def create

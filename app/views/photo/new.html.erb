@@ -5,6 +5,7 @@ NEW PAGE
 
 	<%= f.label :description%>
 	<%= f.text_field :description%>
+<%= select("photo", "albums_id", Albums.all.collect {|a| [ a.album_name, a.id ] }, { :include_blank => true }) %>
 	
 	<%= f.submit%>
 <%end%>
