@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= params[:controller] %>">
+	
   <div id="container">
     <div class="user_nav">
       <% if current_user %>
@@ -17,6 +18,7 @@
         <%= link_to "Log in", login_path  %>.
       <% end %>
     </div>
+<%= render 'layouts/header' %>
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, :id => "flash_#{name}" %>
     <% end %>

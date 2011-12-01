@@ -1,13 +1,22 @@
 Album::Application.routes.draw do
+
+  get "albums/index"
   get "admin/index"
   
   get "logout" => "sessions#destroy", :as => "logout"
-    get "login" => "sessions#new", :as => "login"
-    get "signup" => "users#new", :as => "signup"
-    resources :users
-    resources :sessions
-    get "secret" => "home#secret", :as => "secret"
-    root :to => 'admin#index'
+  get "login" => "sessions#new", :as => "login"
+  get "signup" => "users#new", :as => "signup"
+  get "secret" => "home#secret", :as => "secret"
+    
+  resources :users
+  resources :sessions
+  resources :albums
+  resources :photo
+    
+  root :to => 'albums#index'
+    
+
+    
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

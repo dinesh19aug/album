@@ -1,0 +1,8 @@
+<h1>Albums#index</h1>
+<% @albums.each do |albums| %>
+<%= albums.id%>
+<%= albums.album_name%>
+<%= link_to 'Edit', edit_album_path(albums) %>
+<%= link_to 'Destroy', albums, confirm: 'Are you sure?', method: :delete%>
+<br>
+<%end%>
