@@ -20,7 +20,7 @@ class PhotoController < ApplicationController
     @photo = Photo.new(params[:photo])
     if @photo.save
       
-      render :action=>'show'
+      redirect_to :action=>'index'
     else
       render  :action=>'new'
     end

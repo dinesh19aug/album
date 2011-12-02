@@ -12,7 +12,7 @@ class AlbumsController < ApplicationController
     @albums = Albums.new(params[:albums])
     if @albums.save
       
-      render :action=>'show'
+      redirect_to :action=>'index'
     else
       render  :action=>'new'
     end  
