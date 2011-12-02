@@ -2,7 +2,7 @@ Album::Application.routes.draw do
 
   get "albums/index"
   get "admin/index"
-  get "photo/index"
+  #get "photo/index"
   
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"
@@ -14,7 +14,7 @@ Album::Application.routes.draw do
   resources :albums
   resources :photo
     
-  root :to => 'albums#index'
+  root :to => 'admin#index'
     
 
     

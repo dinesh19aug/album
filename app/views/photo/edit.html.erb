@@ -6,5 +6,8 @@ EDIT Page
 	<%= f.label :description%>
 	<%= f.text_field :description%>
 	
+	Album name  <%= select("photo", "albums_id", Albums.all.collect {|a| [ a.album_name, a.id ] }, { :include_blank => true}) %><br>
+	
+	
 	<%= f.submit%>
 <%end%>
