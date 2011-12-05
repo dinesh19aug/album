@@ -11,5 +11,5 @@ class Photo < ActiveRecord::Base
 
 #Validations
 validates :description,:pic_name,:albums_id, :presence=>true
-
+validates_uniqueness_of :pic_name
 end
