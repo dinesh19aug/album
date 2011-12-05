@@ -1,12 +1,12 @@
 <h1>Photo#index</h1>
 <% @photo.each do |photo| %>
-<%= photo.id%>
-<%= photo.pic_name%>
-<%= photo.description%>
-<%= image_tag photo.image_url%>
-<%= link_to 'Edit', edit_photo_path(photo) %>
-<%= link_to 'Destroy', photo, confirm: 'Are you sure?', method: :delete%>
-<br>
+	<%= photo.id%>
+	<%= photo.pic_name%>
+	<%= photo.description%>
+	<%= image_tag photo.image_url%>
+	<%= link_to 'Edit', edit_photo_path(photo) %>
+	<%= link_to 'Destroy', photo, confirm: 'Are you sure?', method: :delete%>
+	<br>
 <%end%>
 
 <p>

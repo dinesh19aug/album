@@ -1,5 +1,17 @@
 NEW PAGE
+
 <%= form_for @photo ,:url => { :action => "create" }, :html=>{:multipart=>true} do |f| %>
+	<% if @photo.errors.any? %>
+		<div id="error_explanation">
+		  <h2><%= pluralize(@photo.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+		<ul>
+		  <% @photo.errors.full_messages.each do |msg| %>
+		  		<li><%= msg %></li>
+		  <% end %>
+		</ul>
+		    </div>
+	<% end %>
 	<%= f.label :pic_name%>
 	<%= f.text_field :pic_name%><br>
 
