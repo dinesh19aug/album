@@ -18,6 +18,8 @@ class PhotoController < ApplicationController
 
   def create
     @photo = Photo.new(params[:photo])
+
+    puts "***************" + @photo.inspect
     if @photo.save
       
       redirect_to :action=>'index'
