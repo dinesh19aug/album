@@ -22,7 +22,7 @@ class AlbumsController < ApplicationController
     @albums=Albums.find(params[:id])
     
   end
-  
+
   def edit
     
     @albums = Albums.find(params[:id])
