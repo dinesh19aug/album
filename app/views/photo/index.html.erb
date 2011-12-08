@@ -1,15 +1,25 @@
-<h1>Photo#index</h1>
-<% @photo.each do |photo| %>
-	<%= photo.id%>
-	<%= photo.pic_name%>
-	<%= photo.description%>
-	<%= image_tag photo.image_url%>
-	<%= link_to 'Edit', edit_photo_path(photo) %>
-	<%= link_to 'Destroy', photo, confirm: 'Are you sure?', method: :delete%>
-	<br>
-<%end%>
+    
+ 
+<div class="container">
+  <hr></hr>  
+  
+  <div class="span-24 colborder" id="centerbar"><h6>Center</h6>
+    	
+    		<% @photo.each do |photo| %>
+				<%= photo.id%>
+				<%= photo.pic_name%>
+				<%= photo.description%>
+				<%= image_tag photo.image_url%>
+				<%= link_to 'Edit', edit_photo_path(photo) %>
+				<%= link_to 'Destroy', photo, confirm: 'Are you sure?', method: :delete%>
+				<br>
+			<%end%>
 
-<p>
-	<%= link_to 'Add New Photo', new_photo_path %>
+			<p>
+				<%= link_to 'Add New Photo', new_photo_path %>
+			</p>
+    
 
-</p>
+  </div>
+ 
+</div>
