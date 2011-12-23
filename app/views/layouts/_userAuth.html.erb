@@ -10,15 +10,16 @@
         <%= link_to "Log in", login_path  %>.
       <% end %>
     </div>
-    <%= render 'layouts/header' %>
+    
     <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
     <% end %>
-	
+	<!-- Below code will display all the users that are currently logged in-->
+  <!-- 
   <% if current_user %>
 	    <div id="current_users"> Currently active users: <%= current_users_list %></div>
 	<% end %>
-
+-->
     <%= yield %>
   </div>
 

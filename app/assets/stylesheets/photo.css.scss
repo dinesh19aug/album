@@ -1,3 +1,84 @@
 // Place all the styles related to the photo controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#header_image{
+    background-image: url('header.jpg');
+    background-repeat: repeat-x repeat-y;
+    
+
+}
+
+#nav {
+    //margin-top: -55px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+#nav li {
+    display: inline-block;
+    margin-left: 56px;
+    vertical-align: top;
+}
+#nav li a {
+    background-repeat: no-repeat;
+    display: block;
+    height: 35px;
+    text-indent: -9999em;
+}
+#nav li a:focus, #nav li a:hover {
+    background-position: 0 -35px;
+}
+#nav #nav-home {
+    margin-left: 0;
+}
+#nav #nav-orders {
+    margin-left: 42px;
+}
+#nav #nav-contact {
+    margin-left: 42px;
+}
+#nav #nav-pinboard {
+    margin-left: 44px;
+}
+#nav #nav-news {
+    margin-left: 50px;
+}
+#nav #nav-biography {
+    margin-left: 57px;
+}
+#nav #nav-my-way-of-working {
+    margin-left: 51px;
+}
+#nav #nav-home a {
+    background-image: url("../img/style/text/home.gif");
+    width: 35px;
+}
+#nav #nav-orders a {
+    background-image: url("../img/style/text/amen-orders.gif");
+    width: 85px;
+}
+#nav #nav-contact a {
+    background-image: url("../img/style/text/contact.gif");
+    width: 53px;
+}
+#nav #nav-pinboard a {
+    background-image: url("../img/style/text/pinboard.gif");
+    width: 63px;
+}
+#nav #nav-news a {
+    background-image: url("../img/style/text/news.gif");
+    width: 40px;
+}
+#nav #nav-biography a {
+    background-image: url("../img/style/text/biography.gif");
+    width: 72px;
+}
+#nav #nav-awards a {
+    background-image: url("../img/style/text/awards-exhibitions-travels.gif");
+    width: 218px;
+}
+#nav #nav-working a {
+    background-image: url("../img/style/text/my-way-of-working.gif");
+    width: 111px;
+}
