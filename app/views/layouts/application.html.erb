@@ -3,10 +3,7 @@
 <head>
   <title>Auth Example</title>
   <%= stylesheet_link_tag    "application" %>
- <!-- <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %> -->
-  <!-- <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %> -->
-  <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
-
+  <%= stylesheet_link_tag "bootstrap.css" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
@@ -14,9 +11,17 @@
 <body>
 	
     <%= render 'layouts/header' %>
+    <div class="row">
+      <div class="span2">
+        This is my sidebar. This is my sidebar. This is my sidebar. This is my sidebar. This is my sidebar. This is my sidebar. This is my sidebar. This is my sidebar. This is my sidebar. This is my sidebar.
+      </div>
+      <div class="span14">
+      <%= yield %>
+      </div>
+      
+    </div> 
   
-  
-    <%= yield %>
+    
   
 
 </body>

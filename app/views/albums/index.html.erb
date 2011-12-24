@@ -1,10 +1,12 @@
 <h1>Albums#index</h1>
+
 <% @albums.each do |albums| %>
-<%= albums.id%>
-<%= albums.album_name%>
-<%= link_to 'Edit', edit_album_path(albums) %>
-<%= link_to 'Destroy', albums, confirm: 'Are you sure?', method: :delete%>
-<br>
+<div class="clearfix">
+	<%= albums.id%>
+	<%= albums.album_name%>
+	<%= link_to 'Edit', edit_album_path(albums) %>
+	<%= link_to 'Destroy', albums, confirm: 'Are you sure?', method: :delete%>
+</div><br>
 <%end%>
 <p>
 <%= link_to 'Create New Album', new_album_path %>

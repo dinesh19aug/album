@@ -5,3 +5,9 @@
  *= require_self
  *= require_tree . 
 */
+#header{
+    background-image: url('header.jpg');
+    background-repeat: repeat-x repeat-y;
+    
+
+}
