@@ -1,4 +1,6 @@
 class PhotoController < ApplicationController
+skip_before_filter :require_login, :only=>[:index]
+
   def index
     @photo=Photo.all
   end

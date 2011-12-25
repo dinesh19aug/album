@@ -1,4 +1,6 @@
 class AlbumsController < ApplicationController
+  before_filter :require_login
+  
   def index
     @albums=Albums.all
   end

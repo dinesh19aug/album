@@ -14,7 +14,7 @@ Album::Application.routes.draw do
   resources :albums
   resources :photo
   resources :admin  
-  root :to => 'admin#index'
+  root :to => 'photo#index'
     
 
     
