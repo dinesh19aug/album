@@ -1,18 +1,22 @@
     
 	<div class="span12">
     		<% @photo.each do |photo| %>
-				<%= photo.id%>
-				<%= photo.pic_name%>
-				<%= photo.description%>
+				<!--<%= photo.id%> -->
+				<!--<%= photo.pic_name%> -->
+				<!--<%= photo.description%>-->
 				<%= image_tag photo.image_url%>
-				<%= link_to 'Edit', edit_photo_path(photo) %>
-				<%= link_to 'Destroy', photo, confirm: 'Are you sure?', method: :delete%>
+				<%if current_user %>
+					<%= link_to 'Edit', edit_photo_path(photo) %>
+					<%= link_to 'Destroy', photo, confirm: 'Are you sure?', method: :delete%>
+				<%end%>
 				<br>
 			<%end%>
 
 			<p>
+				<%if current_user %>
 				<%= link_to 'Add New Photo', new_photo_path %><br>
 
 				<%= link_to 'Back', admin_index_path %>
+				<%end%>
 			</p>
 	</div>		
