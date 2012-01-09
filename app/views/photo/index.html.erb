@@ -1,21 +1,40 @@
     
 	<div class="span12">
+			
+
     		<% @photo.each do |photo| %>
-				<!--<%= photo.id%> -->
-				<!--<%= photo.pic_name%> -->
-				<!--<%= photo.description%>-->
-				<%= image_tag photo.image_url%>
-				<%if current_user %>
-					<%= link_to 'Edit', edit_photo_path(photo) %>
-					<%= link_to 'Destroy', photo, confirm: 'Are you sure?', method: :delete%>
-				<%end%>
+				<<%= photo.description%>
+				<div id="gallery">
+					
+					<%if current_user %>
+						<%= image_tag photo.image_url,:size =>"50x50"%>
+
+						<%= link_to 'Edit', edit_photo_path(photo) %>
+						<%= link_to 'Destroy', photo, confirm: 'Are you sure?', method: :delete%>
+					<% else %>
+						<%= image_tag photo.image_url%>
+					<%end%>
 				<br>
 			<%end%>
 
+			</div>
+			<br>
+			<%if current_user %>
+				Thsi is user page
+			<% else %>
+				<script>
+   					$('#gallery').galleria({
+        				width:500,
+        				height:500
+    				});
+				</script>	
+			<%end%>
+			
+			
 			<p>
 				<%if current_user %>
 				<%= link_to 'Add New Photo', new_photo_path %><br>
-
+						
 				<%= link_to 'Back', admin_index_path %>
 				<%end%>
 			</p>
