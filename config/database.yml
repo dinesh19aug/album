@@ -31,7 +31,7 @@ production:
     database: album_production
     encoding: utf8
     pool: 5
-    host: ec2-172-16-124-47.compute-1.amazonaws.com
+    #host: ec2-172-16-124-47.compute-1.amazonaws.com
     username: root
     password: admin
     timeout: 5000
