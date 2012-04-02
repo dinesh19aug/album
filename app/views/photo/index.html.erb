@@ -1,17 +1,17 @@
     
-	<div class="span12">
-			
 
-    		<% @photo.each do |photo| %>
-				<<%= photo.description%>
+		<div class="span12">
+			<% @photo.each do |photo| %>
+				
 				<div id="gallery">
 					
 					<%if current_user %>
-						<%= image_tag photo.image_url,:size =>"50x50"%>
+						<%= image_tag photo.image_url,:width =>"800",:height=>"533"%>
 
 						<%= link_to 'Edit', edit_photo_path(photo) %>
 						<%= link_to 'Destroy', photo, confirm: 'Are you sure?', method: :delete%>
 					<% else %>
+
 						<%= image_tag photo.image_url%>
 					<%end%>
 				<br>
@@ -20,12 +20,18 @@
 			</div>
 			<br>
 			<%if current_user %>
-				Thsi is user page
+				This is user page
 			<% else %>
 				<script>
    					$('#gallery').galleria({
-        				width:500,
-        				height:500
+        				width:1100,
+        				height:533,
+        				transition:'fadeslide',
+        				fullscreenDoubleTap:true,
+        				autoplay: 3000,
+        				carousel:true,
+
+
     				});
 				</script>	
 			<%end%>
@@ -38,4 +44,4 @@
 				<%= link_to 'Back', admin_index_path %>
 				<%end%>
 			</p>
-	</div>		
+	</div>

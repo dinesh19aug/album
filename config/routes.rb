@@ -7,7 +7,10 @@ Album::Application.routes.draw do
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"
   get "signup" => "users#new", :as => "signup"
+  get "users" => "users#index", :as=> "user_index"
   get "secret" => "home#secret", :as => "secret"
+
+  match "about" => "info#about", :as => "about"
     
   resources :users
   resources :sessions
