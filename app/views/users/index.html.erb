@@ -1,0 +1,9 @@
+<div></div>
+<% @users.each do |user|%>
+	<%= user.email%>
+	<%= link_to 'Edit', edit_user_path(user) %>
+	<%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete%>
+	<br>
+<%end%>
+
+<%= link_to 'Add New User', new_user_path %><br>
