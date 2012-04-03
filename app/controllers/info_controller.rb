@@ -7,4 +7,8 @@ layout "application"
 	def about
 		
 	end
+
+	def portfolio
+		@albums=Albums.all
+	end	
 end

@@ -11,7 +11,7 @@ Album::Application.routes.draw do
   get "secret" => "home#secret", :as => "secret"
 
   match "about" => "info#about", :as => "about"
-    
+  match "portfolio" => "info#portfolio", :as=> "port"  
   resources :users
   resources :sessions
   resources :albums

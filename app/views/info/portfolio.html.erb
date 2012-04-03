@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="row">
+		<div class="span2">
+			<% @albums.each do |album| %>
+				<div class="clearfix">
+					<%= album.album_name%>
+				</div>
+				<br>
+			<%end%>
+		</div>
+		
+		<div class="span10">
+			Portfolio page
+		</div>
+	</div>
+
+</div>
