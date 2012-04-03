@@ -1,6 +1,6 @@
     
 
-		<div class="span12">
+		<div class="span10">
 			<% @photo.each do |photo| %>
 				
 				<div id="gallery">
@@ -24,11 +24,11 @@
 			<% else %>
 				<script>
    					$('#gallery').galleria({
-        				width:1100,
+        				width:960,
         				height:533,
         				transition:'fadeslide',
         				fullscreenDoubleTap:true,
-        				autoplay: 3000,
+        				/*autoplay: 3000,*/
         				carousel:true,
 
 

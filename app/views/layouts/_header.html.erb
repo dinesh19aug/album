@@ -1,24 +1,32 @@
-
+<div class="conatiner">
+	<div class="row">
 		<div id="header_image">
-			<div id="header_text">Deepti's canvas</div>
+			<div id="header_text">
+				Deepti's canvas
+			</div>
 		</div>
-
-<div class="row">
-	<div id="header">
-		<ul class="tabs">
-			<li class="active"><%= link_to "Home", '#' %>
-			</li>
-			<li ><%= link_to "About Me", :about %></li>
-			<li><%= link_to "Projects", '#' %></li>
-			<li><%= link_to "Contact", '#' %></li>
-			<li><%= link_to "Guest Book", '#' %></li>
-			<%if current_user %>
-          		<li><%= link_to "Logout", :logout%></li>
-        	<%end%>
-		</ul>
 	</div>
+<div id="header-tabs">
+	<div class="row">
+		    
+    			<ul class="nav nav-tabs">
+    				<li><%= link_to "Home", '/' %></li>
+    				<li><%= link_to "About Me", :about %></li>
+    				<li><%= link_to "Portfolio", '#' %></li>
+    				<li><%= link_to "Contact", '#' %></li>
+					<li><%= link_to "Guest Book", '#' %></li>
+					<%if current_user %>
+        	  			<li><%= link_to "Logout", :logout%></li>
+        			<%end%>
+    			</ul>
+    			</div>
+    		</div>
+		
+	
 </div>
 
+
+	
 
 
 

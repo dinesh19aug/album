@@ -12,8 +12,9 @@
 <%= yield :mine%>
 </head>
 <body>
-	 
+	
     <%= render 'layouts/header' %>
+    
     <div class="row">
       <div class="span2">
         <p>
@@ -22,11 +23,12 @@
         Just Like That<br>
         </p>
       </div>
-      <div class="span14">
-      <%= yield %>
-      </div>
       
+      <%= yield %>
+      
+    
     </div> 
+  
     
   
 
