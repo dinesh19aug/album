@@ -10,5 +10,16 @@ layout "application"
 
 	def portfolio
 		@albums=Albums.all
+		@photo=Photo.all
 	end	
+
+	
+
+	def show_album
+		puts "************ show album value"
+		puts(params)
+		
+		puts "************ show album value end"
+		redirect_to :port
+	end
 end

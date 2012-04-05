@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    "application" %>
   <%= stylesheet_link_tag "bootstrap.css" %>
   <%= javascript_include_tag "application" %>
+
   <%= javascript_include_tag "galleria/galleria-1.2.6.min.js" %>
 <%= javascript_include_tag "galleria/themes/classic/galleria.classic.min.js" %>
   
@@ -16,14 +17,7 @@
     <%= render 'layouts/header' %>
     
     <div class="row">
-      <!--<div class="span2">
-        <p>
-        Family<br>
-        Travel<br>
-        Just Like That<br>
-        </p>
-      </div>
-      -->
+      
       <%= yield %>
       
     

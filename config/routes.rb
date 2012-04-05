@@ -12,6 +12,8 @@ Album::Application.routes.draw do
 
   match "about" => "info#about", :as => "about"
   match "portfolio" => "info#portfolio", :as=> "port"  
+  match "portfolio/:id" => "info#show_album", :as=> "show_album"
+
   resources :users
   resources :sessions
   resources :albums

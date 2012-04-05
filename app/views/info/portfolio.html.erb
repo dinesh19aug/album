@@ -1,17 +1,42 @@
+
 <div class="container">
 	<div class="row">
 		<div class="span2">
 			<% @albums.each do |album| %>
-				<div class="clearfix">
-					<%= album.album_name%>
-				</div>
+				
+					<%= link_to album.album_name,show_album_path(album)%>
+				
 				<br>
 			<%end%>
 		</div>
 		
 		<div class="span10">
-			Portfolio page
+			
+			<% @photo.each do |photo| %>
+				
+				<div id="gallery">
+					
+					<%= image_tag photo.image_url%>
+						
+					
+				<br>
+			<%end%>
+			<script>
+   					$('#gallery').galleria({
+        				width:800,
+        				height:533,
+        				transition:'fadeslide',
+        				fullscreenDoubleTap:true,
+        				//autoplay: 3000,
+        				carousel:true
+
+
+    				});
+				</script>
+			
 		</div>
 	</div>
 
 </div>
+
+
