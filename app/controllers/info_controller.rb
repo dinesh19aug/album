@@ -17,9 +17,10 @@ layout "application"
 
 	def show_album
 		puts "************ show album value"
-		puts(params)
-		
+		@albums = Albums.all
+		@photo = Photo.where("albums_id=?",params[:id])
+		puts @photo
 		puts "************ show album value end"
-		redirect_to :port
+		render :portfolio
 	end
 end

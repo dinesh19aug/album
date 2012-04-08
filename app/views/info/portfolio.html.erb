@@ -3,22 +3,15 @@
 	<div class="row">
 		<div class="span2">
 			<% @albums.each do |album| %>
-				
 					<%= link_to album.album_name,show_album_path(album)%>
-				
 				<br>
 			<%end%>
 		</div>
 		
 		<div class="span10">
-			
 			<% @photo.each do |photo| %>
-				
 				<div id="gallery">
-					
 					<%= image_tag photo.image_url%>
-						
-					
 				<br>
 			<%end%>
 			<script>
@@ -29,7 +22,6 @@
         				fullscreenDoubleTap:true,
         				//autoplay: 3000,
         				carousel:true
-
 
     				});
 				</script>
