@@ -1,4 +1,8 @@
-
+<head>
+<title>
+	Photo-New
+</title>
+</head>
 
 <%= form_for @photo ,:url => { :action => "create" }, :html=>{:multipart=>true}, :class=>'form-stacked' do |f| %>
 	<% if @photo.errors.any? %>

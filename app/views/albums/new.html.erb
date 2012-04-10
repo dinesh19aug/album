@@ -1,7 +1,13 @@
-NEW PAGE
+<head>
+<title>
+	Album New
+</title>
+</head>
+<div class="container">
 <%= form_for @albums ,:url => { :action => "create" } do |f| %>
 	<%= f.label :album_name%>
 	<%= f.text_field :album_name%>
 	
 	<%= f.submit%>
 <%end%>
+</div>

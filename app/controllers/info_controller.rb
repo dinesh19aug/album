@@ -8,6 +8,9 @@ layout "application"
 		
 	end
 
+	def contact
+	end
+
 	def portfolio
 		@albums=Albums.all
 		@photo=Photo.all

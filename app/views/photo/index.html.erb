@@ -1,3 +1,8 @@
+<head>
+<title>
+	Index
+</title>
+</head>
 		<div class="span12">
 			<div class="index-body">
 			<% @photo.each do |photo| %>
@@ -19,7 +24,7 @@
 			</div>
 			<br>
 			<%if current_user %>
-				This is user page
+				
 			<% else %>
 				<script>
    					$('#gallery').galleria({

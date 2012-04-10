@@ -1,5 +1,10 @@
-<h1>Albums#index</h1>
 
+<head>
+<title>
+	Album Index
+</title>
+</head>
+<div class="container">
 <% @albums.each do |albums| %>
 <div class="clearfix">
 	<%= albums.id%>
@@ -14,11 +19,5 @@
 <%= link_to 'Create New Album', new_album_path %><br>
 
 <%= link_to 'Back', admin_index_path %>
-
-
-
-
-
-
-
 </p>
+</div>
