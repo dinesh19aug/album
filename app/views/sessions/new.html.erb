@@ -1,16 +1,11 @@
-<h1>Log in</h1>
+  <div class="container">
+  <h1>Log in</h1>
 
-
-    
-    
     <div class="alert-message error">
-     
       <p>  <%= flash.alert %>     </p>
     </div>
-  
 
 <%= form_tag sessions_path do %>
-  
   <div class="clearfix">
     <%= label_tag :email,"EMAIL",:class=>"label" %>
     <%= text_field_tag :email, params[:email] ,:class=>"input"%>
@@ -19,7 +14,6 @@
   <div class="clearfix">
     <%= label_tag :password ,"PASSWORD",:class=>"label"%>
     <%= password_field_tag :password,params[:password], :class=>"input"%>
-    
   </div>
   
   <div class="clearfix">
@@ -29,3 +23,4 @@
   
   <%= submit_tag "Log in", {:class=>"btn primary"} %>
 <% end %>
+</div>

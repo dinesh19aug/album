@@ -5,3 +5,18 @@
  *= require_self
  *= require_tree . 
 */
+
+@font-face
+{
+font-family: myFirstFont;
+src: url('EraserDust.ttf'),
+     url('EraserRegular.ttf'); /* IE9+ */
+}
+
+.crayon-text
+{
+font-family:myFirstFont;
+font-size: 18px;
+color: #FBB117;
+}
+
