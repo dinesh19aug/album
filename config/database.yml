@@ -25,13 +25,12 @@ test:
     password: admin
     timeout: 5000
     socket: /tmp/mysql.sock
-    
+
 production:
     adapter: mysql2
     database: album_production
     encoding: utf8
     pool: 5
-    #host: ec2-172-16-124-47.compute-1.amazonaws.com
     username: root
     password: admin
     timeout: 5000
