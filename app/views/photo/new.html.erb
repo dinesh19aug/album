@@ -3,7 +3,7 @@
 	Photo-New
 </title>
 </head>
-
+<div class="container">
 <%= form_for @photo ,:url => { :action => "create" }, :html=>{:multipart=>true}, :class=>'form-stacked' do |f| %>
 	<% if @photo.errors.any? %>
 		<div id="error_explanation">
@@ -42,3 +42,4 @@
 		<%= f.submit "Create new picture" ,:class=>'btn primary'%>
 	
 <%end%>
+</div>
