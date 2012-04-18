@@ -4,11 +4,15 @@
   
   <%= stylesheet_link_tag    "application" %>
   <%= stylesheet_link_tag "bootstrap.css" %>
-  <%= javascript_include_tag "application" %>
-
-  <%= javascript_include_tag "galleria/galleria-1.2.6.min.js" %>
-<%= javascript_include_tag "galleria/themes/classic/galleria.classic.min.js" %>
+  <!--<%= stylesheet_link_tag "flexslider/flexslider.css" %>-->
+<%= stylesheet_link_tag "flexslider/flexslider.css" %>
   
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "flexslider/jquery.flexslider-min.js" %>
+  
+  <!--<%= javascript_include_tag "galleria/galleria-1.2.6.min.js" %>
+  <%= javascript_include_tag "galleria/themes/classic/galleria.classic.min.js" %>
+  -->
   <%= csrf_meta_tags %>
 <%= yield :mine%>
 </head>

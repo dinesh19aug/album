@@ -1,28 +1,20 @@
 
 <div class="conatiner">
-	<div class="row">
-		<div id="header_image">
-			
-				
-				<%= image_tag("header4",:width=>"900",:height=>"100") %>
-				
-			
-		</div>
-	</div>
+	
 <div id="header-tabs">
-	<div class="row">
-		    
-    			<ul class="nav nav-tabs">
-    				<li><%= link_to "Home", '/',:class=>"crayon-text" %></li>
-    				<li><%= link_to "About Me", :about,:class=>"crayon-text" %></li>
-    				<li><%= link_to "Portfolio", :port,:class=>"crayon-text" %></li>
-    				<li><%= link_to "Contact", :contact,:class=>"crayon-text" %></li>
-					<%if current_user %>
-        	  			<li><%= link_to "Logout", :logout,:class=>"crayon-text" %></li>
-        			<%end%>
-    			</ul>
-    			</div>
-    		</div>
+	
+	<div class="span12">
+		<ul class="nav nav-tabs">
+			<li><%= link_to "Home", '/'%></li>
+			<li><%= link_to "About Me", :about%></li>
+    		<li><%= link_to "Portfolio", :port%></li>
+    		<li><%= link_to "Contact", :contact%></li>
+			<%if current_user %>
+        	  	<li><%= link_to "Logout", :logout%></li>
+        	<%end%>
+    	</ul>
+    </div>
+</div>
 		
 	
 </div>
