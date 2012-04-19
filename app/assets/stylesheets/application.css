@@ -9,14 +9,25 @@
 @font-face
 {
 font-family: myFirstFont;
-src: url('EraserDust.ttf'),
-     url('EraserRegular.ttf'); /* IE9+ */
+src: url('Alias.ttf');
+     
 }
 
-.crayon-text
+.alias
 {
 font-family:myFirstFont;
 font-size: 18px;
-color: #FBB117;
+/*color: #0074CC;*/
+color:#ffffff;
+
 }
 
+.alias-name
+{
+font-family:myFirstFont;
+font-size: 38px;
+color: #ffffff;
+margin-top:10px;
+margin-left:300px;
+text-align: right;
+}

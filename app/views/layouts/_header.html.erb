@@ -2,18 +2,23 @@
 <div class="conatiner">
 	
 <div id="header-tabs">
-	
-	<div class="span12">
-		<ul class="nav nav-tabs">
-			<li><%= link_to "Home", '/'%></li>
-			<li><%= link_to "About Me", :about%></li>
-    		<li><%= link_to "Portfolio", :port%></li>
-    		<li><%= link_to "Contact", :contact%></li>
-			<%if current_user %>
-        	  	<li><%= link_to "Logout", :logout%></li>
-        	<%end%>
-    	</ul>
-    </div>
+	<div class="row">
+		<div class="span12">
+			<ul class="nav nav-tabs">
+				
+				<li><%= link_to "Home", '/' ,:class=>"alias"%></li>
+				<li><%= link_to "About Me", :about ,:class=>"alias" %></li>
+    			<li><%= link_to "Portfolio", :port ,:class=>"alias"%></li>
+    			<li><%= link_to "Contact", :contact ,:class=>"alias"%></li>
+				<%if current_user %>
+        	  		<li><%= link_to "Logout", :logout ,:class=>"alias"%></li>
+        		<%end%>
+
+        		<li><div class="alias-name">Deepti Arora Photography </div></li>
+    		</ul>
+		</div>
+   		
+	</div>
 </div>
 		
 	
