@@ -1,26 +1,26 @@
   <div class="container">
-  <h1>Log in</h1>
+      <h1>Log in</h1>
 
-    <div class="alert-message error">
-      <p>  <%= flash.alert %>     </p>
-    </div>
+      <div class="alert-message error">
+          <p>  <%= flash.alert %>     </p>
+      </div>
 
-<%= form_tag sessions_path do %>
-  <div class="clearfix">
-    <%= label_tag :email,"EMAIL",:class=>"label" %>
-    <%= text_field_tag :email, params[:email] ,:class=>"input"%>
-  </div>
+      <%= form_tag sessions_path do %>
+          <div class="clearfix">
+              <%= label_tag :email,"EMAIL",:class=>"label" %>
+              <%= text_field_tag :email, params[:email] ,:class=>"input"%>
+          </div>
 
-  <div class="clearfix">
-    <%= label_tag :password ,"PASSWORD",:class=>"label"%>
-    <%= password_field_tag :password,params[:password], :class=>"input"%>
-  </div>
+          <div class="clearfix">
+            <%= label_tag :password ,"PASSWORD",:class=>"label"%>
+            <%= password_field_tag :password,params[:password], :class=>"input"%>
+          </div>
   
-  <div class="clearfix">
-    <%= check_box_tag :remember_me, 1, params[:remember_me],:class=>"input input-prepend add-on" %>
-    <%= label_tag :remember_me,"Remember Me", :class=>"mini"%>
-  </div>
+          <div class="clearfix">
+              <%= check_box_tag :remember_me, 1, params[:remember_me],:class=>"input input-prepend add-on" %>
+              <%= label_tag :remember_me,"Remember Me", :class=>"mini"%>
+          </div>
   
-  <%= submit_tag "Log in", {:class=>"btn primary"} %>
-<% end %>
-</div>
+          <%= submit_tag "Log in", {:class=>"btn primary"} %>
+      <% end %>
+  </div>
