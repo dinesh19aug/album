@@ -1,23 +1,37 @@
 
 <head>
-<title>
+	<title>
 	Album Index
-</title>
+	</title>
 </head>
 <div class="container">
-<% @albums.each do |albums| %>
-<div class="clearfix">
-	<%= albums.id%>
-	<%= albums.album_name%>
-	<%if current_user %>
-		<%= link_to 'Edit', edit_album_path(albums) %>
-		<%= link_to 'Destroy', albums, confirm: 'Are you sure?', method: :delete%>
-	<% end %>
-</div><br>
-<%end%>
-<p>
-<%= link_to 'Create New Album', new_album_path %><br>
+	<% @albums.each do |albums| %>
+		<div class="clearfix">
+			<span class="label"><%= albums.album_name%></span><br>
+			<%if current_user %>
+				<div class="btn-group">
+					<div class="btn">
+						<%= link_to 'Edit', edit_album_path(albums) %> 
+					</div>	
+					<div class="btn">
+						<%= link_to 'Destroy', albums, confirm: 'Are you sure?', method: :delete%>
+					</div>	
+				</div>	
+			<% end %>
+		</div>
+		<br>
+	<%end%>
+	<p>
+	
+	<div class="btn-group">
+		<div class="btn">
+			<%= link_to 'Create New Album', new_album_path %>
+		</div>
+		<div class="btn">
+			<%= link_to 'Back',admin_index_path%>	
+		</div>
+	</div>
 
-<%= link_to 'Back', admin_index_path %>
-</p>
+	
+	</p>
 </div>

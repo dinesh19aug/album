@@ -3,9 +3,20 @@
 	Edit Album
 </title>
 </head>
-<%= form_for @albums do |f| %>
-	<%= f.label :album_name%>
-	<%= f.text_field :album_name%>
+<div class="container">
+	<%= form_for @albums do |f| %>
+		<%= f.label :album_name%>
+		<%= f.text_field :album_name%>
+		
+		<%= f.submit%>
+		
+			
+		
+	<%end%>
+	<div class="btn-group">
+		<div class="btn">
+		<%= link_to 'Back',albums_index_path%>	
+	</div>
+	</div>	
 	
-	<%= f.submit%>
-<%end%>
+</div>
