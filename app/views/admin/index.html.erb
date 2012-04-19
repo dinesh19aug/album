@@ -4,9 +4,16 @@
 </title>
 </head>
 <div class="container">
-<%= render 'layouts/userAuth' %>
-
-<%= link_to "Manage Albums", :albums %><br>
-<%= link_to "Manage Photos", :photo_index %><br>
-<%= link_to "Manage Users", :user_index %><br>
+	<%= render 'layouts/userAuth' %>
+	<div class="btn">
+		<%= link_to "Manage Albums", :albums %>
+	</div>
+	<br><br>
+	<div class="btn">
+		<%= link_to "Manage Photos", :photo_index %>
+	</div>
+	<br><br>
+	<div class="btn">
+		<%= link_to "Manage Users", :user_index %>
+	</div>
 </div>
