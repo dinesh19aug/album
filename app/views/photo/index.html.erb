@@ -3,8 +3,21 @@
 	Index
 </title>
 </head>
-
-		<div class="span9 offset1">
+	    <div class="span2">
+	    	<p>
+				<%if current_user %>
+					<div class="btn">
+						<%= link_to 'Add New Photo', new_photo_path %><br>
+					</div>
+					<br><br>
+					<div class="btn">		
+						<%= link_to 'Back', admin_index_path %>
+					</div>	
+				<%end%>
+			</p>
+	    </div>	
+		<div class="span9">
+			
 			<div class="index-body">
 				<div class="flexslider">	
 					<ul class="slides">
@@ -64,14 +77,6 @@
 						</script>
 
 				<%end%>
-			
-			
-			<p>
-				<%if current_user %>
-				<%= link_to 'Add New Photo', new_photo_path %><br>
-						
-				<%= link_to 'Back', admin_index_path %>
-				<%end%>
-			</p>
+
 	</div>
 </div>

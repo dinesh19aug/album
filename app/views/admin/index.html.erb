@@ -5,15 +5,21 @@
 </head>
 <div class="container">
 	<%= render 'layouts/userAuth' %>
-	<div class="btn">
-		<%= link_to "Manage Albums", :albums %>
-	</div>
-	<br><br>
-	<div class="btn">
-		<%= link_to "Manage Photos", :photo_index %>
-	</div>
-	<br><br>
-	<div class="btn">
-		<%= link_to "Manage Users", :user_index %>
+	
+	<div class="row">
+		<div class="span12 offset4">
+			<div class="btn">
+				<%= link_to "Manage Albums", :albums %>
+			</div>
+			<br><br>
+			<div class="btn">
+				<%= link_to "Manage Photos", :photo_index %>
+			</div>
+			<br><br>
+			<div class="btn">
+				<%= link_to "Manage Users", :user_index %>
+			</div>
+		</div>
+		
 	</div>
 </div>
