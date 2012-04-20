@@ -1,6 +1,6 @@
 Album::Application.routes.draw do
 
-  get "albums/index"
+  #get "albums/index"
   
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"

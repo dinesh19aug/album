@@ -3,15 +3,17 @@
 	Edit Photo
 </title>
 </head>
-<%= form_for @photo do |f| %>
-	<%= f.label :pic_name%>
-	<%= f.text_field :pic_name%>
+<div class="container">
+	<%= form_for @photo do |f| %>
+		<%= f.label :pic_name%>
+		<%= f.text_field :pic_name%>
 
-	<%= f.label :description%>
-	<%= f.text_field :description%>
-	
-	Album name  <%= select("photo", "albums_id", Albums.all.collect {|a| [ a.album_name, a.id ] }, { :include_blank => true}) %><br>
-	
-	
-	<%= f.submit%>
-<%end%>
+		<%= f.label :description%>
+		<%= f.text_field :description%>
+		
+		<br>Album name  <br>
+		<%= select("photo", "albums_id", Albums.all.collect {|a| [ a.album_name, a.id ] }, { :include_blank => true}) %><br>
+		
+		<%= f.submit%>
+	<%end%>
+</div>

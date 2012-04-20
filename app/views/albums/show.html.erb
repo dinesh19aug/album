@@ -4,5 +4,22 @@
 </title>
 </head>
 <div class="container">
-<%= @albums.album_name%>
+	<div class="row">
+		<div class="span12 offset3">
+			<%= @albums.album_name%>
+		</div>	
+	</div>
+	<br>
+
+	<ul class="thumbnails">
+		<% @photo.each do |photo| %>
+			<li class="span3">
+				<%= image_tag photo.image_url, :width=>"220", :height=>"100"%><br>
+				<%if current_user %>
+					<%= link_to 'Edit', edit_photo_path(photo) %>
+					<%= link_to 'Destroy', photo, confirm: 'Are you sure?', method: :delete%>
+				<% end %>
+			</li>
+		<%end%>
+	</ul>	
 </div>

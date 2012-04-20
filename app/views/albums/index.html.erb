@@ -15,6 +15,9 @@
 					</div>	
 					<div class="btn">
 						<%= link_to 'Destroy', albums, confirm: 'Are you sure?', method: :delete%>
+					</div>
+					<div class="btn">
+						<%= link_to 'Show', album_path(albums)%>	
 					</div>	
 				</div>	
 			<% end %>
@@ -30,6 +33,7 @@
 		<div class="btn">
 			<%= link_to 'Back',admin_index_path%>	
 		</div>
+		
 	</div>
 
 	

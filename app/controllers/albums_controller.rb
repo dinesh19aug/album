@@ -21,7 +21,9 @@ class AlbumsController < ApplicationController
   end
   
   def show
+    puts "****************ALBUM SHOW CALLED *******************"
     @albums=Albums.find(params[:id])
+    @photo = Photo.where("albums_id=?",params[:id])
     
   end
 
