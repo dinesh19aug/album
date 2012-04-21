@@ -9,7 +9,8 @@ gem 'mysql2'
 gem 'sorcery'
 #This is used for image uploads
 gem 'carrierwave'
-
+gem 'rmagick'
+gem 'mini_magick'
 
 # Gems used only for assets and not required
 # in production environments by default.

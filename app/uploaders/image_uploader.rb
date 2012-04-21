@@ -3,19 +3,40 @@
 class ImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
-  # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+   #include CarrierWave::RMagick
+   include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
   storage :file
   # storage :fog
 
+  before :store, :remember_cache_id
+  after :store, :delete_tmp_dir
+
+  # store! nil's the cache_id after it finishes so we need to remember it for deletion
+  def remember_cache_id(new_file)
+    @cache_id_was = cache_id
+  end
+  
+  def delete_tmp_dir(new_file)
+    # make sure we don't delete other things accidentally by checking the name pattern
+    if @cache_id_was.present? && @cache_id_was =~ /\A[\d]{8}\-[\d]{4}\-[\d]+\-[\d]{4}\z/
+      FileUtils.rm_rf(File.join(cache_dir, @cache_id_was))
+    end
+  end
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
+  process :quality => 20
+  process :resize_to_fit => [1296,972]
+  
+  version :medium do
+      process :quality => 20
+  end
+  
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
   #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
@@ -30,7 +51,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   # version :thumb do
-  #   process :scale => [50, 50]
+  #   process :scale => [1296,972]
   # end
 
   # Add a white list of extensions which are allowed to be uploaded.
