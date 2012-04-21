@@ -5,7 +5,6 @@
 	<div class="row">
 		<div class="span12">
 			<ul class="nav nav-tabs">
-				
 				<li><%= link_to "Home", '/' ,:class=>"alias"%></li>
 				<li><%= link_to "About Me", :about ,:class=>"alias" %></li>
     			<li><%= link_to "Portfolio", :port ,:class=>"alias"%></li>
@@ -13,8 +12,9 @@
 				<%if current_user %>
         	  		<li><%= link_to "Logout", :logout ,:class=>"alias"%></li>
         		<%end%>
-
         		<li><div class="alias-name">Deepti Arora Photography </div></li>
+				
+        		
     		</ul>
 		</div>
    		
