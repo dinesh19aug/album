@@ -8,7 +8,7 @@ skip_before_filter :require_login, :only=>[:new,:create]
     if user
       redirect_back_or_to root_url,:notice => "Logged In"
     else
-      flash.now.alert ="Email  or password was invalid"
+      flash.now.alert ="Email  or password is invalid"
       render :new
     end
   end
