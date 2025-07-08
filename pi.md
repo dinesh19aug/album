@@ -1,6 +1,6 @@
  1. CI/CD & DevOps Automation
 
-Q: Describe your approach to designing a scalable CI/CD pipeline for microservices.
+Q: Describe your approach to designing a scalable CI/CD pipeline for microservices.  
 A:
 I use a modular approach with reusable templates and pipelines-as-code. Each service has a pipeline template with shared stages—build, test, scan, package, deploy—while allowing team-specific overrides. I use GitHub Actions with reusable workflows, secrets via GitHub OIDC to cloud providers, and ephemeral environments for pull requests using tools like ArgoCD or Terraform for infrastructure provisioning.
 
